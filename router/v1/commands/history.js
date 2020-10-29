@@ -39,7 +39,7 @@ class History {
                 pageCounter++
 
                 // Fetch
-                const nextPageUrl = `http://localhost:${process.env.PORT}/v1/history?page=${pageCounter}&limit=1000&user=${user}`
+                const nextPageUrl = `http://localhost:${process.env.PORT}/api/v1/history?page=${pageCounter}&limit=1000&user=${user}`
                 const nextPageRaw = await fetch(nextPageUrl)
                 const nextPage = await nextPageRaw.json()
 

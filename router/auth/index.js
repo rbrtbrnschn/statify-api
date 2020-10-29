@@ -1,9 +1,8 @@
 const router = require("express").Router()
 const callback = require("./callback")
-router.get("/",(req,res)=>{
-    res.send("TODO")
-})
+const auth = require("./auth")
 
 router.get("/callback",callback)
+router.get("/",auth)
 
 module.exports = router
