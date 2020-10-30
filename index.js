@@ -9,7 +9,7 @@ const cors = require("cors")
 // Modules
 app.use(cors())
 app.use(cookieParser())
-app.use("/images",express.static("images"))
+app.use("/api/images",express.static("images"))
 
 // Routers
 const routerPath = process.env.PWD+"/router"
